@@ -1,0 +1,90 @@
+/* Global Reset */
+* {
+    font-family: 'Allerta', arial, Tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full viewport height */
+    background-color: #000; /* Set a background color for better visibility */
+}
+
+h3 {
+    text-shadow: 1px 1px 1px #fff;
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Audio Player */
+.container-audio {
+    width: 66%;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background for better contrast */
+    color: #fff;
+    overflow: hidden;
+    text-align: center; /* Center the audio player content */
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Style audio controls */
+audio::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+    border-radius: 10px;
+    color: white;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff00; /* white play button */
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #fff; /* white text for time display */
+}
+
+audio::-webkit-media-controls-volume-slider-container {
+    display: none; /* hide volume slider */
+}
+
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button {
+    color: #fff; /* white color for seek buttons */
+}
+
+audio::-webkit-media-controls-rewind-button,
+audio::-webkit-media-controls-return-to-realtime-button,
+audio::-webkit-media-controls-fast-forward-button,
+audio::-webkit-media-controls-toggle-closed-captions-button,
+audio::-webkit-media-controls-fullscreen-button {
+    display: none; /* hide other controls */
+}
+
+audio {
+    appearance: none; /* remove default styling */
+}
